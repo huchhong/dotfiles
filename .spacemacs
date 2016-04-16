@@ -256,6 +256,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
   (global-linum-mode)
   (global-company-mode)
+  (set-variable 'ycmd-server-command '("python" "/home/huch/code/ycmd/ycmd"))
+  (add-hook 'c-mode-hook 'ycmd-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
