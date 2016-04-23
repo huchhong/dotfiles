@@ -258,6 +258,9 @@ you should place you code here."
   (global-linum-mode)
   (global-company-mode)
   (set-variable 'ycmd-server-command '("python" "/home/huch/code/ycmd/ycmd"))
+  (add-hook 'ycmd-mode-hook
+            (lambda()
+              (define-key ycmd-mode-map (kbd "C-,") 'ycmd-goto-definition)))
   (add-hook 'c-mode-hook 'ycmd-mode)
   )
 
