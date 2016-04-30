@@ -262,6 +262,7 @@ you should place you code here."
             (lambda()
               (define-key ycmd-mode-map (kbd "C-,") 'ycmd-goto-definition)))
   (add-hook 'c-mode-hook 'ycmd-mode)
+  (setq-default c-basic-offset 4)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
