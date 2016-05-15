@@ -211,6 +211,7 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Monaco:h14
 else
     if has('unix')
         set t_Co=256
@@ -428,6 +429,10 @@ noremap <silent> <F2> :TagbarToggle<cr>
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
+
+" Ctrlp
+nnoremap <leader>f :CtrlPMRUFiles<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
