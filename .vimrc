@@ -65,6 +65,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'terryma/vim-multiple-cursors'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -431,7 +432,7 @@ noremap <silent> <F3> :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
 
 " Ctrlp
-nnoremap <leader>f :CtrlPMRUFiles<CR>
+nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 
 " easymotion
