@@ -268,8 +268,8 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 """"""""""""""""""""""""""""""
 " => Quickfix window
 """"""""""""""""""""""""""""""
-nmap <C-j> :cp <cr>
-nmap <C-k> :cn <cr>
+nmap <C-j> :cn <cr>
+nmap <C-k> :cp <cr>
 
 
 " Visual mode pressing * or # searches for the current selection
