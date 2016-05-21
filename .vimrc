@@ -114,8 +114,8 @@ nmap <leader>w :w!<cr>
 command W w !sudo tee % > /dev/null
 
 " quick quit to normal mode
-imap fd <ESC>
-vmap fd <ESC>
+imap jk <ESC>
+vmap jk <ESC>
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
