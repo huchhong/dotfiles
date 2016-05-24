@@ -117,6 +117,9 @@ command W w !sudo tee % > /dev/null
 imap jk <ESC>
 vmap jk <ESC>
 
+" Use system clipboard
+set clipboard=unnamed
+
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
 if has("autocmd")
