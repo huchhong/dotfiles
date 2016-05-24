@@ -419,6 +419,11 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" paste in insert mode
+set pastetoggle=<F10>
+inoremap <C-v> <F10><C-r>*<F10>
+vnoremap <C-c> "*y
+
 " Set ctags localtion to /usr/local/bin
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
