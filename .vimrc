@@ -218,7 +218,11 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set guifont=Monaco:h14
+    if has("mac")
+        set guifont=Monaco:h14
+    elseif has('gui_gtk2')
+        set guifont=Monospace\ 12
+    endif
 else
     if has('unix')
         set t_Co=256
