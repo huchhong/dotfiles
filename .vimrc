@@ -69,6 +69,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/vim-auto-save'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -469,6 +470,11 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" auto svae
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
 
 " Ack
 nnoremap <Leader>/ :Ack<CR>
