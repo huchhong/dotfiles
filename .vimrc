@@ -70,6 +70,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/vim-auto-save'
+Plugin 'mattn/emmet-vim'
+Plugin 'gregsexton/matchtag'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
