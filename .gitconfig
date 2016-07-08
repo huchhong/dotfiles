@@ -8,3 +8,5 @@
 [user]
 	email = huchhong@gmail.com
 	name = Chaohong Hu
+[push]
+	default = matching
