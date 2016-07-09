@@ -118,7 +118,6 @@ command W w !sudo tee % > /dev/null
 
 " quick quit to normal mode
 imap jk <ESC>
-vmap jk <ESC>
 
 " Use system clipboard
 set clipboard=unnamed
