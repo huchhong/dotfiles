@@ -200,6 +200,8 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" disable highlighting of parenthesis matching
+let loaded_matchparen = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -461,7 +463,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
