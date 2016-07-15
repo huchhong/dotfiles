@@ -453,6 +453,9 @@ let NERDTreeWinPos=1
 " Ctrlp
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_show_hidden = 1
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
