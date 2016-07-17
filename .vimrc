@@ -322,6 +322,9 @@ let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
+" quick move between left and right window
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
