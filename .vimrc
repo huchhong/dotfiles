@@ -490,12 +490,13 @@ nnoremap <Leader>/ :Ack<CR>
 
 " YouCompleteMe
 nnoremap <leader>jd :YcmCompleter GoTo
+let g:ycm_python_binary_path = 'python'
 
 " Cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 if has("cscope")
-    set csprg=/usr/local/bin/cscope
+    set csprg=/usr/bin/cscope
     set csto=1
     set cst
     set nocsverb
