@@ -72,6 +72,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/matchtag'
+Plugin 'tomlion/vim-solidity'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
