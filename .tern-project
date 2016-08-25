@@ -4,6 +4,8 @@
         "jquery"
     ],
     "plugins": {
-        "node": {}
+        "node": {},
+        "modules": {},
+        "node_resolve": {}
     }
 }
