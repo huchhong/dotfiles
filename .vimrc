@@ -271,6 +271,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
