@@ -406,6 +406,8 @@ set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>*<F10>
 vnoremap <C-c> "*y
 
+nnoremap <leader>a za
+
 " Set ctags localtion to /usr/local/bin
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
