@@ -72,6 +72,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/matchtag'
+Plugin 'tomlion/vim-solidity'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -270,6 +271,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -417,9 +419,11 @@ let tagbar_width=32
 let g:tagbar_compact=1
 let g:tagbar_sort=0
 noremap <silent> <F2> :TagbarToggle<cr>
+noremap <silent> <leader>t :TagbarToggle<cr>
 
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
+noremap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
 
 " Ctrlp

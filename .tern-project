@@ -2,5 +2,10 @@
     "libs": [
         "browser",
         "jquery"
-    ]
+    ],
+    "plugins": {
+        "node": {},
+        "modules": {},
+        "node_resolve": {}
+    }
 }
