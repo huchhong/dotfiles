@@ -58,7 +58,6 @@ Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'Shougo/neocomplcache.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
@@ -69,7 +68,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/vim-auto-save'
+"Plugin 'vim-scripts/vim-auto-save'
 Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/matchtag'
 Plugin 'tomlion/vim-solidity'
@@ -109,9 +108,6 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = " "
 let g:mapleader = " "
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -203,6 +199,8 @@ set foldcolumn=1
 
 " disable highlighting of parenthesis matching
 let loaded_matchparen = 1
+
+map <Leader>w :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -447,13 +445,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" neocomplcache
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " auto svae
 let g:auto_save = 1
