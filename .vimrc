@@ -456,6 +456,7 @@ nnoremap <Leader>/ :Ack<CR>
 
 " YouCompleteMe
 nnoremap <leader>jd :YcmCompleter GoTo
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 
 " Cscope
