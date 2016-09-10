@@ -419,7 +419,7 @@ let tagbar_width=32
 let g:tagbar_compact=1
 let g:tagbar_sort=0
 noremap <silent> <F2> :TagbarToggle<cr>
-noremap <silent> <leader>t :TagbarToggle<cr>
+noremap <silent> <leader>g :TagbarToggle<cr>
 
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
