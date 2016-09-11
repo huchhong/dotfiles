@@ -30,6 +30,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/matchtag'
 Plugin 'tomlion/vim-solidity'
+Plugin 'plasticboy/vim-markdown'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
