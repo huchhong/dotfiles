@@ -31,6 +31,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/matchtag'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -76,7 +77,9 @@ command W w !sudo tee % > /dev/null
 imap jk <ESC>
 
 " Use system clipboard
-set clipboard=unnamed
+if $TMUX == ''
+    set clipboard=unnamed
+endif
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
