@@ -22,14 +22,14 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-expand-region'
-"Plugin 'shougo/neocomplete.vim'
+Plugin 'shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'hynek/vim-python-pep8-indent'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
-Plugin 'gregsexton/matchtag'
+"Plugin 'gregsexton/matchtag'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'toyamarinyon/vim-swift'
@@ -80,7 +80,7 @@ imap jk <ESC>
 
 " Use system clipboard
 if $TMUX == ''
-    set clipboard=unnamed
+    set clipboard=unnamedplus
 endif
 
 " Uncomment the following to have Vim jump to the last position when                                                       
@@ -278,6 +278,8 @@ map <C-l> <C-w>l
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
+set mouse=a
+
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
@@ -363,10 +365,14 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Syntastic
+let g:syntastic_error_symbol = '>>'
+let g:syntastic_warning_symbol = '>'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_highlighting=1
+let g:syntastic_python_checkers=['pyflakes']
 
 " auto svae
 let g:auto_save = 1
