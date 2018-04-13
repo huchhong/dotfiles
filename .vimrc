@@ -16,6 +16,8 @@ Plugin 'matchit.zip'
 Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
+Plugin 'HenryNewcomer/vim-theme-underflow'
+Plugin 'vim-scripts/Solarized'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -173,11 +175,13 @@ map <Leader>w :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 syntax enable 
 
 try
-    colorscheme molokai
+    "colorscheme molokai
+    colorscheme solarized
+    "colorscheme underflow
 catch
 endtry
 
-set background=dark
+set background=light
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -386,6 +390,7 @@ nnoremap <Leader>/ :Ack<CR>
 nnoremap <leader>jd :YcmCompleter GoTo
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
+let g:ycm_confirm_extra_conf = 0
 set completeopt-=preview
 
 " Cscope
