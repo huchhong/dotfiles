@@ -348,7 +348,6 @@ let tagbar_width=25
 let g:tagbar_compact=1
 let g:tagbar_sort=0
 noremap <silent> <F2> :TagbarToggle<cr>
-noremap <silent> <leader>g :TagbarToggle<cr>
 
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
@@ -358,7 +357,7 @@ let NERDTreeWinPos=1
 " Ctrlp
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>e :CtrlPBufTag<CR>
+nnoremap <leader>g :CtrlPBufTag<CR>
 nnoremap <leader>t :CtrlPBufTagAll<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
