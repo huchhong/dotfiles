@@ -32,7 +32,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'roxma/vim-paste-easy'
-"Plugin 'gregsexton/matchtag'
+Plugin 'vim-scripts/vim-auto-save'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'toyamarinyon/vim-swift'
@@ -300,6 +300,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
 map 0 ^
+map 1 $
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -339,6 +340,8 @@ set tags=./tags,tags;$HOME
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:AutoPairsMapCR = 0
 
+let g:auto_save = 1
+
 " Tagbar
 let tagbar_left=1 
 let tagbar_width=25
@@ -360,6 +363,7 @@ nnoremap <leader>t :CtrlPBufTagAll<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_mruf_relative = 1
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
