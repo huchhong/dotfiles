@@ -31,6 +31,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
+Plugin 'roxma/vim-paste-easy'
 "Plugin 'gregsexton/matchtag'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
@@ -321,9 +322,6 @@ map <leader>q :e ~/buffer<cr>
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
 
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
-
 " paste in insert mode
 set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>*<F10>
@@ -357,6 +355,8 @@ let NERDTreeWinPos=1
 " Ctrlp
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>e :CtrlPBufTag<CR>
+nnoremap <leader>t :CtrlPBufTagAll<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
