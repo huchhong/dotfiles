@@ -32,7 +32,6 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'roxma/vim-paste-easy'
-Plugin 'vim-scripts/vim-auto-save'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'toyamarinyon/vim-swift'
@@ -92,6 +91,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+nnoremap ,w :wa<CR>
+nnoremap <silent> ,q :wa<CR>:qa<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -239,6 +241,7 @@ set si "Smart indent
 set wrap "Wrap lines
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -380,11 +383,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_python_checkers=['pyflakes']
-
-" auto svae
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-let g:auto_save_silent = 1
 
 " Ack
 nnoremap <Leader>/ :Ack<CR>
