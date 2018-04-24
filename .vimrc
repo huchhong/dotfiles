@@ -92,8 +92,9 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-nnoremap ,w :wa<CR>
-nnoremap <silent> ,q :wa<CR>:qa<CR>
+nnoremap <leader>w :wa<CR>
+nnoremap <leader>q :qa<CR>
+nnoremap <silent> <leader>Q :qa!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -169,7 +170,7 @@ set foldcolumn=1
 " disable highlighting of parenthesis matching
 let loaded_matchparen = 1
 
-map <Leader>w :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
+map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -313,6 +314,7 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufNewFile,BufRead *.launch set syntax=xml
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
@@ -321,10 +323,10 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+map <leader>e :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+"map <leader>x :e ~/buffer.md<cr>
 
 " paste in insert mode
 set pastetoggle=<F10>
