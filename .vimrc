@@ -29,12 +29,13 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'roxma/vim-paste-easy'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'toyamarinyon/vim-swift'
+Plugin 'vhdirk/vim-cmake'
 Plugin 'Valloric/YouCompleteMe'
 
 " let Vundle manage Vundle, required
@@ -179,9 +180,9 @@ map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 syntax enable 
 
 try
-    "colorscheme molokai
+    colorscheme molokai
     "colorscheme solarized
-    colorscheme underflow
+    "colorscheme underflow
 catch
 endtry
 
