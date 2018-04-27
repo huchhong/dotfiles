@@ -254,6 +254,7 @@ autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
+
 " Visual mode pressing * or # searches for the current selection
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -362,6 +363,7 @@ let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_mruf_relative = 1
+let g:ctrlp_by_filename=1
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
