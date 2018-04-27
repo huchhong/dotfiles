@@ -254,14 +254,6 @@ autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
-
-""""""""""""""""""""""""""""""
-" => Quickfix window
-""""""""""""""""""""""""""""""
-nmap <C-j> :cn <cr>
-nmap <C-k> :cp <cr>
-
-
 " Visual mode pressing * or # searches for the current selection
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
