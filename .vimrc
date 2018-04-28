@@ -29,13 +29,13 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'hynek/vim-python-pep8-indent'
-"Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'roxma/vim-paste-easy'
 Plugin 'tomlion/vim-solidity'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'vhdirk/vim-cmake'
+Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Valloric/YouCompleteMe'
 
 " let Vundle manage Vundle, required
@@ -328,9 +328,6 @@ set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>*<F10>
 vnoremap <C-c> "*y
 
-" toggle fold
-nnoremap <leader>a za
-
 " Set ctags localtion to /usr/local/bin
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 set tags=./tags,tags;$HOME
@@ -392,6 +389,9 @@ let g:ycm_python_binary_path = 'python'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 set completeopt-=preview
+
+" fswitch
+nnoremap <leader>a :FSHere<CR>
 
 " Cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
