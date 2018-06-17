@@ -311,6 +311,13 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufNewFile,BufRead *.launch set syntax=xml
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lauguage specific settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set cindent
+set cinoptions=g-1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
