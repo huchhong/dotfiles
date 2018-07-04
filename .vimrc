@@ -311,6 +311,8 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufNewFile,BufRead *.launch set syntax=xml
 
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+vnoremap <Leader>s :s/\<<C-r><C-w>\>//g<Left><Left>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lauguage specific settings
@@ -402,29 +404,29 @@ set completeopt-=preview
 nnoremap <leader>a :FSHere<CR>
 
 " Cscope
-set cscopequickfix=s-,c-,d-,i-,t-,e-
+"set cscopequickfix=s-,c-,d-,i-,t-,e-
 
-if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=1
-    set cst
-    set nocsverb
+"if has("cscope")
+    "set csprg=/usr/bin/cscope
+    "set csto=1
+    "set cst
+    "set nocsverb
     
-    if filereadable("cscope.out")
-        cs add cscope.out
-    endif
-    set csverb
-endif
+    "if filereadable("cscope.out")
+        "cs add cscope.out
+    "endif
+    "set csverb
+"endif
 
-nmap <leader>ss :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>st :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>se :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <leader>sd :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>sr :! cscope -Rbkq <CR> :cs reset <CR>
+"nmap <leader>ss :cs find s <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>st :cs find t <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>se :cs find e <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"nmap <leader>sd :cs find d <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>sr :! cscope -Rbkq <CR> :cs reset <CR>
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
