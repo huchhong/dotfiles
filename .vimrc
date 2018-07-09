@@ -244,7 +244,8 @@ set wrap "Wrap lines
 set cindent
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
+autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
+autocmd Filetype xml setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
