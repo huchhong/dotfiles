@@ -24,7 +24,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-expand-region'
-Plugin 'shougo/neocomplete.vim'
+"Plugin 'shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -397,6 +397,7 @@ nnoremap <leader>jd :YcmCompleter GoTo
 nnoremap <C-t> :YcmCompleter GoTo<CR>
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
+let g:ycm_max_diagnostics_to_display=0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 set completeopt-=preview
