@@ -37,9 +37,12 @@ Plugin 'toyamarinyon/vim-swift'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Mark--Karkat'
+
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,9 +85,7 @@ command W w !sudo tee % > /dev/null
 imap jk <ESC>
 
 " Use system clipboard
-if $TMUX == ''
-    set clipboard=unnamedplus
-endif
+set clipboard=unnamedplus
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file
@@ -171,7 +172,7 @@ set foldcolumn=1
 " disable highlighting of parenthesis matching
 let loaded_matchparen = 1
 
-map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
+"map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -264,9 +265,6 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 map j gj
 map k gk
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
@@ -315,6 +313,9 @@ autocmd BufNewFile,BufRead *.launch set syntax=xml
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 vnoremap <Leader>s :s/\<<C-r><C-w>\>//g<Left><Left>
 
+nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
+nnoremap <silent> <Leader><CR> :noh<CR> :call clearmatches()<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lauguage specific settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -325,7 +326,7 @@ set cinoptions=g-1
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+"noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
 map <leader>e :e ~/buffer<cr>
@@ -345,6 +346,9 @@ set tags=./tags,tags;$HOME
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>v <Plug>MarkRegex
+nnoremap <leader>v1 <Plug>MarkSearchAnyNext
+
 let g:AutoPairsMapCR = 0
 
 let g:auto_save = 1
@@ -358,7 +362,7 @@ noremap <silent> <F2> :TagbarToggle<cr>
 
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
-noremap <silent> <leader>n :NERDTreeToggle<cr>
+"noremap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
 
 " Ctrlp
@@ -399,7 +403,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_max_diagnostics_to_display=0
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 set completeopt-=preview
 
 " fswitch
