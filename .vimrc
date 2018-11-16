@@ -38,6 +38,8 @@ Plugin 'vhdirk/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Mark--Karkat'
+Plugin 'vim-syntastic/syntastic'
+"Plugin 'uarun/vim-protobuf'
 
 
 " let Vundle manage Vundle, required
@@ -152,6 +154,8 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
+set scrolloff=0
+
 " Show line number
 set nu
 
@@ -172,7 +176,7 @@ set foldcolumn=1
 " disable highlighting of parenthesis matching
 let loaded_matchparen = 1
 
-"map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
+map <Leader>i :let @/ = '\<'.expand('<cword>').'\>'\|set hlsearch<C-M>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -247,6 +251,7 @@ set cindent
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype xml setlocal ts=2 sts=2 sw=2
+autocmd Filetype prototxt setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
