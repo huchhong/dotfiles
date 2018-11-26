@@ -96,6 +96,8 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+au BufRead * normal zR
+
 nnoremap <leader>w :wa<CR>
 nnoremap <leader>q :qa<CR>
 nnoremap <silent> <leader>Q :qa!<CR>
@@ -153,8 +155,6 @@ set lazyredraw
 
 " For regular expressions turn magic on
 set magic
-
-set scrolloff=0
 
 " Show line number
 set nu
@@ -252,6 +252,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
 autocmd Filetype xml setlocal ts=2 sts=2 sw=2
 autocmd Filetype prototxt setlocal ts=2 sts=2 sw=2
+autocmd Filetype cuda setlocal ts=2 sts=2 sw=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
