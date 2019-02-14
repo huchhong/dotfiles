@@ -18,13 +18,11 @@ Plugin 'tomasr/molokai'
 Plugin 'majutsushi/tagbar'
 Plugin 'HenryNewcomer/vim-theme-underflow'
 Plugin 'vim-scripts/Solarized'
-"Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-expand-region'
-"Plugin 'shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -38,8 +36,7 @@ Plugin 'vhdirk/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Mark--Karkat'
-"Plugin 'vim-syntastic/syntastic'
-"Plugin 'uarun/vim-protobuf'
+Plugin 'Chiel92/vim-autoformat'
 
 
 " let Vundle manage Vundle, required
@@ -249,7 +246,7 @@ set wrap "Wrap lines
 set cindent
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
+autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
 autocmd Filetype xml setlocal ts=2 sts=2 sw=2
 autocmd Filetype prototxt setlocal ts=2 sts=2 sw=2
 autocmd Filetype cuda setlocal ts=2 sts=2 sw=2
@@ -418,6 +415,9 @@ let g:ycm_max_diagnostics_to_display=0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 set completeopt-=preview
+
+" autoformatter
+noremap <leader>o :Autoformat<CR>
 
 " fswitch
 nnoremap <leader>a :FSHere<CR>
