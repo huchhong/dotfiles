@@ -38,7 +38,7 @@ Plugin 'vhdirk/vim-cmake'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Mark--Karkat'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 "Plugin 'uarun/vim-protobuf'
 
 
@@ -405,11 +405,18 @@ nnoremap <Leader>/ :Ack<CR>
 " YouCompleteMe
 nnoremap <leader>jd :YcmCompleter GoTo
 nnoremap <C-t> :YcmCompleter GoTo<CR>
+let g:ycm_register_as_syntastic_checker = 1
+let g:Show_diagnostics_ui = 1
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_always_populate_location_list = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
+
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_max_diagnostics_to_display=0
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 set completeopt-=preview
 
 " fswitch
