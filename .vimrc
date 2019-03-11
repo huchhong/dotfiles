@@ -285,6 +285,10 @@ map <C-l> <C-w>l
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 set mouse=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -365,7 +369,6 @@ noremap <silent> <F2> :TagbarToggle<cr>
 
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
-"noremap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
 
 " Ctrlp
