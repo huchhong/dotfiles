@@ -370,6 +370,7 @@ noremap <silent> <F2> :TagbarToggle<cr>
 " Nerdtree
 noremap <silent> <F3> :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
+map <leader>f :NERDTreeFind<cr>
 
 " Ctrlp
 nnoremap <leader>r :CtrlPMRUFiles<CR>
@@ -584,7 +585,3 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" Make VIM remember position in file after reopen
-" if has("autocmd")
-"   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
