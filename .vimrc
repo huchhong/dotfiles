@@ -371,6 +371,9 @@ noremap <silent> <F2> :TagbarToggle<cr>
 noremap <silent> <F3> :NERDTreeToggle<cr>
 let NERDTreeWinPos=1
 map <leader>f :NERDTreeFind<cr>
+" auto close nerdtree on close of current file
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") 
+      \ && b:NERDTreeType == "primary") | q | endif
 
 " Ctrlp
 nnoremap <leader>r :CtrlPMRUFiles<CR>
